@@ -31,7 +31,7 @@ const App: React.FC = () => {
             Moisture Level: {moistureLevel}
           </div>
           <div className="percentage-bar-container">
-            <div className="percentage-bar-filled" style={{ height: 100 }}></div>
+            <div className="percentage-bar-filled" style={{ height: moistureLevel*100 }}></div>
           </div>
         </div>
       ) : (
