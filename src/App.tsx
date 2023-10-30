@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Channel, Feed, ApiResponse } from './types';
-import PercentBar from './percentbar';
+import './percent.css'; // Make sure to import the stylesheet
+
 
 const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
@@ -25,8 +26,13 @@ const App: React.FC = () => {
   return (
     <div>
       {moistureLevel !== null ? (
-        <div className="alarm-icon red">
-          Moisture Level: {moistureLevel}
+        <div>
+          <div className="alarm-icon red">
+            Moisture Level: {moistureLevel}
+          </div>
+          <div className="percentage-bar-container">
+            <div className="percentage-bar-filled" style={{ height: 100 }}></div>
+          </div>
         </div>
       ) : (
         'Loading...'
