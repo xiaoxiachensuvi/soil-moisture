@@ -5,6 +5,7 @@
   margin-bottom: 3rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .headline {
@@ -35,7 +36,6 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the 'physical' look */
 }
 
