@@ -1,24 +1,31 @@
 .percentage-bar-container {
   width: 100px;
   height: 350px;
-  background-color: #ccc;
   position: relative;
+  border-radius: 10px;
+  box-shadow: 4px 1px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .percentage-bar-filled {
   width: 100%;
   position: absolute;
   bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .ideal-percentage-bar-filled {
   width: 100%;
   background-color: rgba(76, 175, 80, 0.2); /* Green with 80% opacity */
-
   position: absolute;
 }
 
 .percentage-value {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Correct for exact centering */
 }
