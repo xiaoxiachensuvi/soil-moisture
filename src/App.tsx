@@ -8,7 +8,8 @@ const App: React.FC = () => {
   const minMoisture = 0.2;
   const maxMoisture = 0.8;
 
-  useEffect(() => {
+
+  const fetchData = () => {
     // Replace with your API URL
     fetch('https://api.thingspeak.com/channels/2321499/feeds.json?results=1')
       .then(response => response.json())
@@ -23,23 +24,31 @@ const App: React.FC = () => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
+    const intervalId = setInterval(fetchData, 5000); // 5000ms = 5s
+
+    // Cleanup: clear the interval when the component is unmounted
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
   const determineBarClass = () => {
     if (moistureLevel !== null) {
       if (moistureLevel < minMoisture) return 'status-red';
       if (moistureLevel > maxMoisture) return 'status-orange';
-    } else {
-      return "status-red";
     }
-    return '';
+    return 'status-green';
   };
 
   return (
     <div>
       {moistureLevel !== null ? (
         <div>
-          <div className="alarm-icon red">
+          <div className={`alarm-icon ${determineBarClass()}`} >
             Moisture Level: {moistureLevel}
           </div>
           <div className="percentage-bar-container">
