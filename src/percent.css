@@ -1,0 +1,13 @@
+.percentage-bar-container {
+  width: 30px;
+  height: 120px;
+  background-color: #ccc;
+  position: relative;
+}
+
+.percentage-bar-filled {
+  width: 100%;
+  background-color: #4CAF50;
+  position: absolute;
+  bottom: 0;
+}
