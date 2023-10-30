@@ -5,6 +5,8 @@ import './percent.css'; // Make sure to import the stylesheet
 
 const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
+  const minMoisture = 0.2;
+  const maxMoisture = 0.8;
 
   useEffect(() => {
     // Replace with your API URL
@@ -23,6 +25,16 @@ const App: React.FC = () => {
       });
   }, []);
 
+  const determineBarClass = () => {
+    if (moistureLevel !== null) {
+      if (moistureLevel < minMoisture) return 'status-red';
+      if (moistureLevel > maxMoisture) return 'status-orange';
+    } else {
+      return "status-red";
+    }
+    return '';
+  };
+
   return (
     <div>
       {moistureLevel !== null ? (
@@ -31,7 +43,7 @@ const App: React.FC = () => {
             Moisture Level: {moistureLevel}
           </div>
           <div className="percentage-bar-container">
-            <div className="percentage-bar-filled" style={{ height: moistureLevel*100 }}></div>
+            <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*100 }}></div>
           </div>
         </div>
       ) : (

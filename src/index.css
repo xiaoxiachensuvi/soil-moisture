@@ -42,18 +42,18 @@ code {
   inset: true;
 }
 
-.red {
+.status-red {
   background-color: rgba(244, 67, 54, 0.5); /* Red with 80% opacity */
 }
 
-.orange {
+.status-orange {
   background-color: rgba(255, 152, 0, 0.5); /* Orange with 80% opacity */
 }
 
-.green {
+.status-green {
   background-color: rgba(76, 175, 80, 0.5); /* Green with 80% opacity */
 }
 
-.gray {
+.offline {
   background-color: rgba(158, 158, 158, 0.8); /* Gray with 80% opacity */
 }
