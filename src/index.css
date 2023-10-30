@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+.data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
 .alarm-icon {
   width: 100px;
   height: 100px;

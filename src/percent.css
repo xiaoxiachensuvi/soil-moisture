@@ -1,6 +1,6 @@
 .percentage-bar-container {
-  width: 30px;
-  height: 120px;
+  width: 100px;
+  height: 350px;
   background-color: #ccc;
   position: relative;
 }
@@ -16,4 +16,9 @@
   background-color: rgba(76, 175, 80, 0.2); /* Green with 80% opacity */
 
   position: absolute;
+}
+
+.percentage-value {
+  position: absolute;
+  bottom: 10%;
 }

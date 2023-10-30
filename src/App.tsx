@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Channel, Feed, ApiResponse } from './types';
+import Headline from './Headline';
 import './percent.css'; // Make sure to import the stylesheet
 
 
@@ -7,6 +8,7 @@ const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
   const minMoisture = 0.2;
   const maxMoisture = 0.8;
+  const percentContainerHeight = 350; // 350px
 
 
   const fetchData = () => {
@@ -48,15 +50,16 @@ const App: React.FC = () => {
   const idealHeight = `${(maxMoisture - minMoisture) * 100}%`;
 
   return (
-    <div>
+    <div className="data-container">
+      <Headline></Headline>
       {moistureLevel !== null ? (
         <div>
           <div className={`alarm-icon ${determineBarClass()}`} >
-            Moisture Level: {moistureLevel}
           </div>
           <div className="percentage-bar-container">
             <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}></div>
-            <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*100 }}></div>
+            <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*percentContainerHeight }}></div>
+            <div className="percentage-value">{(moistureLevel*100).toFixed(2)}%</div>
           </div>
         </div>
       ) : (
