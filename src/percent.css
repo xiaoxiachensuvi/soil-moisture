@@ -10,3 +10,10 @@
   position: absolute;
   bottom: 0;
 }
+
+.ideal-percentage-bar-filled {
+  width: 100%;
+  background-color: rgba(76, 175, 80, 0.2); /* Green with 80% opacity */
+
+  position: absolute;
+}

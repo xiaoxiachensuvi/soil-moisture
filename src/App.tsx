@@ -44,6 +44,9 @@ const App: React.FC = () => {
     return 'status-green';
   };
 
+  const idealTop = `${minMoisture * 100}%`;
+  const idealHeight = `${(maxMoisture - minMoisture) * 100}%`;
+
   return (
     <div>
       {moistureLevel !== null ? (
@@ -52,6 +55,7 @@ const App: React.FC = () => {
             Moisture Level: {moistureLevel}
           </div>
           <div className="percentage-bar-container">
+            <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}></div>
             <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*100 }}></div>
           </div>
         </div>
