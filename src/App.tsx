@@ -51,16 +51,12 @@ const App: React.FC = () => {
 
   return (
     <div className="data-container">
-      <Headline></Headline>
+      <Headline alarmClassName={`alarm-icon ${determineBarClass()}`}></Headline>
       {moistureLevel !== null ? (
-        <div>
-          <div className={`alarm-icon ${determineBarClass()}`} >
-          </div>
-          <div className="percentage-bar-container">
-            <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}></div>
-            <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*percentContainerHeight }}></div>
-            <div className="percentage-value">{(moistureLevel*100).toFixed(2)}%</div>
-          </div>
+        <div className="percentage-bar-container">
+          <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}></div>
+          <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*percentContainerHeight }}></div>
+          <div className="percentage-value">{(moistureLevel*100).toFixed(2)}%</div>
         </div>
       ) : (
         'Loading...'
