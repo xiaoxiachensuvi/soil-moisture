@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/soil-moisture/static/css/main.e07da46a.css",
+    "main.js": "/soil-moisture/static/js/main.e6262eaf.js",
+    "static/js/787.2356ebd9.chunk.js": "/soil-moisture/static/js/787.2356ebd9.chunk.js",
+    "index.html": "/soil-moisture/index.html",
+    "main.e07da46a.css.map": "/soil-moisture/static/css/main.e07da46a.css.map",
+    "main.e6262eaf.js.map": "/soil-moisture/static/js/main.e6262eaf.js.map",
+    "787.2356ebd9.chunk.js.map": "/soil-moisture/static/js/787.2356ebd9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e07da46a.css",
+    "static/js/main.e6262eaf.js"
+  ]
+}
