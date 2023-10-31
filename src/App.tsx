@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Channel, Feed, ApiResponse } from './types';
 import Headline from './Headline';
-import './percent.css'; // Make sure to import the stylesheet
+import './percent.css';
 
 
 const App: React.FC = () => {
@@ -14,7 +14,6 @@ const App: React.FC = () => {
 
 
   const fetchData = () => {
-    // Replace with your API URL
     fetch('https://api.thingspeak.com/channels/2321499/feeds.json?results=1')
       .then(response => response.json())
       .then((data: ApiResponse) => {
@@ -33,7 +32,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     fetchData();
-    const intervalId = setInterval(fetchData, 5000); // 5000ms = 5s
+    const intervalId = setInterval(fetchData, 5000);
 
     // Cleanup: clear the interval when the component is unmounted
     return () => {
@@ -57,7 +56,6 @@ const App: React.FC = () => {
       {moistureLevel !== null ? (
         <div className="data-container">
           <Headline alarmClassName={`alarm-icon ${determineBarClass()}`}></Headline>
-          <div className="last-update">Last Update: {lastUpdate}</div> 
 
           <div className="percentage-bar-container">
             <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}>

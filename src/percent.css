@@ -16,7 +16,7 @@
 
 .ideal-percentage-bar-filled {
   width: 100%;
-  background-color: rgba(76, 175, 80, 0.2); /* Green with 80% opacity */
+  background-color: rgba(76, 175, 80, 0.2);
   position: absolute;
 
 }
@@ -51,6 +51,6 @@
   color: #777;
   font-weight: bold;
   font-size: 20px;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Correct for exact centering */
+  left: 50%;
+  transform: translateX(-50%); 
 }

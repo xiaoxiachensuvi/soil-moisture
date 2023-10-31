@@ -36,7 +36,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the 'physical' look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .alarm-icon::before,
@@ -52,11 +52,11 @@
 }
 
 .alarm-icon::before {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   inset: true;
 }
 
 .alarm-icon::after {
-  box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.2); /* Inner highlight */
+  box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.2);
   inset: true;
 }
