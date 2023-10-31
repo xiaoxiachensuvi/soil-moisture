@@ -50,17 +50,19 @@ const App: React.FC = () => {
   const idealHeight = `${(maxMoisture - minMoisture) * 100}%`;
 
   return (
-    <div className="data-container">
-      <Headline alarmClassName={`alarm-icon ${determineBarClass()}`}></Headline>
+    <div>
       {moistureLevel !== null ? (
-        <div className="percentage-bar-container">
-          <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}>
-            <div className="ideal-percentage-bar-strikes">
-              <div className="ideal-percentage-bar-strikes-instruction">Optimal Moisture Level</div>
+        <div className="data-container">
+          <Headline alarmClassName={`alarm-icon ${determineBarClass()}`}></Headline>
+          <div className="percentage-bar-container">
+            <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}>
+              <div className="ideal-percentage-bar-strikes">
+                <div className="ideal-percentage-bar-strikes-instruction">Optimal Moisture Level</div>
+              </div>
             </div>
+            <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*percentContainerHeight }}></div>
+            <div className="percentage-value">{(moistureLevel*100).toFixed(2)}%</div>
           </div>
-          <div className={`percentage-bar-filled ${determineBarClass()}`} style={{ height: moistureLevel*percentContainerHeight }}></div>
-          <div className="percentage-value">{(moistureLevel*100).toFixed(2)}%</div>
         </div>
       ) : (
         'Loading...'
