@@ -6,6 +6,8 @@ import './percent.css'; // Make sure to import the stylesheet
 
 const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
+  const [lastUpdate, setlastUpdate] = useState<string | null>(null);
+
   const minMoisture = 0.2;
   const maxMoisture = 0.8;
   const percentContainerHeight = 350; // 350px
@@ -22,6 +24,7 @@ const App: React.FC = () => {
         const mappedValue = Math.min(Math.max((field1Value / 700), 0), 1);
 
         setMoistureLevel(mappedValue);
+        setlastUpdate(data.feeds[0].created_at);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -54,6 +57,8 @@ const App: React.FC = () => {
       {moistureLevel !== null ? (
         <div className="data-container">
           <Headline alarmClassName={`alarm-icon ${determineBarClass()}`}></Headline>
+          <div className="last-update">Last Update: {lastUpdate}</div> 
+
           <div className="percentage-bar-container">
             <div className="ideal-percentage-bar-filled" style={{ top: idealTop, height: idealHeight }}>
               <div className="ideal-percentage-bar-strikes">
