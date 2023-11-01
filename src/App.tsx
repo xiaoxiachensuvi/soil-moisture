@@ -53,8 +53,9 @@ const App: React.FC = () => {
     return date.toLocaleString();
   };
 
-  const idealTop = `${minMoisture * 100}%`;
+  const idealTop = `${(1 - maxMoisture) * 100}%`;
   const idealHeight = `${(maxMoisture - minMoisture) * 100}%`;
+  console.log(idealTop);
 
   return (
     <div>
