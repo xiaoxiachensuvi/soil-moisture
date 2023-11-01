@@ -8,8 +8,8 @@ const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
   const [lastUpdate, setlastUpdate] = useState<string | null>(null);
 
-  const minMoisture = 0.2;
-  const maxMoisture = 0.8;
+  const minMoisture = 0.4;
+  const maxMoisture = 0.65;
   const percentContainerHeight = 350; // 350px
 
 

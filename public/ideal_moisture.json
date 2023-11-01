@@ -1,0 +1,57 @@
+[
+  {
+    "plant_name": "Snake Plant",
+    "min_value": 0.2,
+    "max_value": 0.3
+  },
+  {
+    "plant_name": "Spider Plant",
+    "min_value": 0.4,
+    "max_value": 0.5
+  },
+  {
+    "plant_name": "Peace Lily",
+    "min_value": 0.5,
+    "max_value": 0.6
+  },
+  {
+    "plant_name": "ZZ Plant",
+    "min_value": 0.2,
+    "max_value": 0.3
+  },
+  {
+    "plant_name": "Fiddle Leaf Fig",
+    "min_value": 0.3,
+    "max_value": 0.4
+  },
+  {
+    "plant_name": "Pothos",
+    "min_value": 0.4,
+    "max_value": 0.5
+  },
+  {
+    "plant_name": "Rubber Plant",
+    "min_value": 0.3,
+    "max_value": 0.4
+  },
+  {
+    "plant_name": "Aloe Vera",
+    "min_value": 0.2,
+    "max_value": 0.3
+  },
+  {
+    "plant_name": "Jade Plant",
+    "min_value": 0.2,
+    "max_value": 0.3
+  },
+  {
+    "plant_name": "Monstera Deliciosa",
+    "min_value": 0.4,
+    "max_value": 0.5
+  },
+  {
+    "plant_name": "Calathea",
+    "min_value": 0.5,
+    "max_value": 0.6
+  }
+]
