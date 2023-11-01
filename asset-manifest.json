@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/soil-moisture/static/css/main.7a20ba3d.css",
-    "main.js": "/soil-moisture/static/js/main.575109e3.js",
+    "main.css": "/soil-moisture/static/css/main.0db8837f.css",
+    "main.js": "/soil-moisture/static/js/main.7e572dc4.js",
     "static/js/787.2356ebd9.chunk.js": "/soil-moisture/static/js/787.2356ebd9.chunk.js",
     "index.html": "/soil-moisture/index.html",
-    "main.7a20ba3d.css.map": "/soil-moisture/static/css/main.7a20ba3d.css.map",
-    "main.575109e3.js.map": "/soil-moisture/static/js/main.575109e3.js.map",
+    "main.0db8837f.css.map": "/soil-moisture/static/css/main.0db8837f.css.map",
+    "main.7e572dc4.js.map": "/soil-moisture/static/js/main.7e572dc4.js.map",
     "787.2356ebd9.chunk.js.map": "/soil-moisture/static/js/787.2356ebd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a20ba3d.css",
-    "static/js/main.575109e3.js"
+    "static/css/main.0db8837f.css",
+    "static/js/main.7e572dc4.js"
   ]
 }
