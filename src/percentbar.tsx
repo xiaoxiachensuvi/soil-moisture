@@ -1,5 +1,5 @@
 import React from 'react';
-import './PercentBar.css'; // Make sure to import the stylesheet
+import './PercentBar.css';
 
 interface PercentBarProps {
   moistureLevel: number;

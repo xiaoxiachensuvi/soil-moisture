@@ -9,7 +9,7 @@ const App: React.FC = () => {
 
   const minMoisture = 0.4;
   const maxMoisture = 0.65;
-  const percentContainerHeight = 350; // 350px is the height of the percentage component
+  const percentContainerHeight = 350; // 350px is the height of the percent
 
 
   const fetchData = () => {
