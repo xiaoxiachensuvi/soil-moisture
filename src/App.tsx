@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Channel, Feed, ApiResponse } from './types';
 import Headline from './Headline';
 import PercentBar from './PercentBar';
+import './App.css';
 
 const App: React.FC = () => {
   const [moistureLevel, setMoistureLevel] = useState<number | null>(null);
@@ -22,7 +23,7 @@ const App: React.FC = () => {
         const mappedValue = Math.min(Math.max((field1Value / 700), 0), 1);
 
         setMoistureLevel(mappedValue);
-        setlastUpdate(data.feeds[0].created_at);
+        setlastUpdate(toHumanReadableDate(data.feeds[0].created_at));
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -47,6 +48,11 @@ const App: React.FC = () => {
     return 'status-green';
   };
 
+  const toHumanReadableDate = (isoDate: string): string => {
+    const date = new Date(isoDate);
+    return date.toLocaleString();
+  };
+
   const idealTop = `${minMoisture * 100}%`;
   const idealHeight = `${(maxMoisture - minMoisture) * 100}%`;
 
@@ -62,6 +68,7 @@ const App: React.FC = () => {
             maxMoisture={maxMoisture}
             percentContainerHeight={percentContainerHeight}
           />
+          <div className="last-update">Last update: {lastUpdate}</div>
         </div>
       ) : (
         'Loading...'
